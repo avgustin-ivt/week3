@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>fetch</title><meta charset="utf-8">
+ </head>
+ <body>
+  
+<input type="text" id="inp" placeholder="Введите текст"><Br>
+<button id="bt" onclick="func()">Клацните сюда</button>
+ 
+<script>
+async function func(){
+  const input = document.querySelector('#inp');
+  const inputLink = input.value;
+ 
+  const response = await fetch(inputLink);
+  const rezult = await response.text()
+ 
+  input.value = rezult;
+}
+</script>
+ </body>
+</html>
